@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/string-remove-last",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Remove the last character of a string.",
   "license": "Apache-2.0",
   "author": {

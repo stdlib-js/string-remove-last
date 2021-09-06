@@ -143,6 +143,22 @@ bee
 
 <!-- /.cli -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/string/remove-first`][@stdlib/string/remove-first]: remove the first character of a string.
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
 
 <section class="main-repo" >
 
@@ -199,6 +215,12 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/string-remove-last/main/LICENSE
 
 [standard-streams]: https://en.wikipedia.org/wiki/Standard_streams
+
+<!-- <related-links> -->
+
+[@stdlib/string/remove-first]: https://github.com/stdlib-js/string-remove-first
+
+<!-- </related-links> -->
 
 </section>
 

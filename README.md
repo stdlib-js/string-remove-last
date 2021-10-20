@@ -22,7 +22,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] [![dependencies][dependencies-image]][dependencies-url]
 
-> Remove the last character of a string.
+> Remove the last character(s) of a string.
 
 <section class="installation">
 
@@ -42,7 +42,7 @@ npm install @stdlib/string-remove-last
 var removeLast = require( '@stdlib/string-remove-last' );
 ```
 
-#### removeLast( str )
+#### removeLast( str\[, n] )
 
 Removes the last character of a `string`.
 
@@ -52,6 +52,16 @@ var out = removeLast( 'last man standing' );
 
 out = removeLast( 'Hidden Treasures' );
 // returns 'Hidden Treasure'
+```
+
+If provided a second argument, the function removes the last `n` characters.
+
+```javascript
+var out = removeLast( 'foo bar', 4 );
+// returns 'foo'
+
+out = removeLast( 'foo bar', 0 );
+// returns 'foo bar'
 ```
 
 </section>
@@ -78,6 +88,12 @@ str = removeLast( 'javaScript' );
 
 str = removeLast( 'Hidden Treasures' );
 // returns 'Hidden Treasure'
+
+str = removeLast( 'Lorem ipsum dolor sit amet', 4 );
+// returns 'Lorem ipsum dolor sit '
+
+str = removeLast( '🐮🐷🐸🐵', 2 );
+// returns '🐮🐷'
 ```
 
 </section>
@@ -113,6 +129,7 @@ Options:
 
   -h,    --help                Print this message.
   -V,    --version             Print the package version.
+         --n                   Number of characters to remove. Default: 1.
 ```
 
 </section>
@@ -131,8 +148,9 @@ bee
 To use as a [standard stream][standard-streams],
 
 ```bash
-$ echo -n 'beep' | remove-last
-bee
+$ echo -n 'beep\nboop' | remove-last --n 2
+be
+bo
 ```
 
 </section>

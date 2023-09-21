@@ -35,43 +35,36 @@ limitations under the License.
 
 > Remove the last character(s) of a string.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/string-remove-last
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-removeLast = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/string-remove-last@umd/browser.js' )
+var removeLast = require( '@stdlib/string-remove-last' );
 ```
 
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+#### removeLast( str\[, n]\[, options] )
 
-```javascript
-var removeLast = require( 'path/to/vendor/umd/string-remove-last/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-remove-last@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.removeLast;
-})();
-</script>
-```
-
-#### removeLast( str\[, n] )
-
-Removes the last character of a `string`.
+Removes the last character(s) of an input string.
 
 ```javascript
 var out = removeLast( 'last man standing' );
@@ -81,7 +74,17 @@ out = removeLast( 'Hidden Treasures' );
 // returns 'Hidden Treasure'
 ```
 
-If provided a second argument, the function removes the last `n` characters.
+The function supports the following options:
+
+-   **mode**: type of characters to remove. Must be one of the following:
+
+    -   `'grapheme'`: grapheme clusters. Appropriate for strings containing visual characters which can span multiple Unicode code points (e.g., emoji).
+    -   `'code_point'`: Unicode code points. Appropriate for strings containing visual characters which are comprised of more than one Unicode code unit (e.g., ideographic symbols and punctuation and mathematical alphanumerics).
+    -   `'code_unit'`: UTF-16 code units. Appropriate for strings containing visual characters drawn from the basic multilingual plane (BMP) (e.g., common characters, such as those from the Latin, Greek, and Cyrillic alphabets).
+
+    Default: `'grapheme'`.
+
+By default, the function returns the last character. To return the last `n` characters, provide a second argument specifying the number of characters to return.
 
 ```javascript
 var out = removeLast( 'foo bar', 4 );
@@ -95,19 +98,26 @@ out = removeLast( 'foo bar', 0 );
 
 <!-- /.usage -->
 
+<!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+## Notes
+
+-   By default, the function assumes the general case in which an input string may contain an arbitrary number of grapheme clusters. This assumption comes with a performance cost. Accordingly, if an input string is known to only contain visual characters of a particular type (e.g., only alphanumeric), one can achieve better performance by specifying the appropriate `mode` option.
+
+</section>
+
+<!-- /.notes -->
+
 <section class="examples">
 
 ## Examples
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-remove-last@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var removeLast = require( '@stdlib/string-remove-last' );
 
 var str = removeLast( 'last man standing' );
 // returns 'last man standin'
@@ -126,18 +136,106 @@ str = removeLast( 'Lorem ipsum dolor sit amet', 4 );
 
 str = removeLast( '🐮🐷🐸🐵', 2 );
 // returns '🐮🐷'
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/string-remove-last-cli
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: remove-last [options] [<string>]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+         --n                   Number of characters to remove. Default: 1.
+         --split sep           Delimiter for stdin data. Default: '/\\r?\\n/'.
+         --mode mode           Type of character to remove. Default: 'grapheme'.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+### Notes
+
+-   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
+
+    ```bash
+    # Not escaped...
+    $ echo -n $'beep\nboop' | remove-last --split /\r?\n/
+
+    # Escaped...
+    $ echo -n $'beep\nboop' | remove-last --split /\\r?\\n/
+    ```
+
+-   The implementation ignores trailing delimiters.
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ remove-last beep
+bee
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n 'beep\nboop' | remove-last --n 2
+be
+bo
+```
+
+By default, when used as a [standard stream][standard-streams], the implementation assumes newline-delimited data. To specify an alternative delimiter, set the `split` option.
+
+```bash
+$ echo -n 'beep\tboop' | remove-last --split '\t'
+bee
+boo
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -232,7 +330,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/string/remove-first]: https://github.com/stdlib-js/string-remove-first/tree/umd
+[@stdlib/string/remove-first]: https://github.com/stdlib-js/string-remove-first
 
 <!-- </related-links> -->
 

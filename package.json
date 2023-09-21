@@ -40,7 +40,10 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
+    "@stdlib/array-base-assert-contains": "^0.0.1",
+    "@stdlib/assert-has-own-property": "^0.0.7",
     "@stdlib/assert-is-nonnegative-integer": "^0.0.7",
+    "@stdlib/assert-is-plain-object": "^0.0.7",
     "@stdlib/assert-is-regexp-string": "^0.0.9",
     "@stdlib/assert-is-string": "^0.0.8",
     "@stdlib/cli-ctor": "^0.0.3",
@@ -48,8 +51,10 @@
     "@stdlib/process-read-stdin": "^0.0.7",
     "@stdlib/regexp-eol": "^0.0.7",
     "@stdlib/streams-node-stdin": "^0.0.7",
+    "@stdlib/string-base-remove-last": "github:stdlib-js/string-base-remove-last#main",
+    "@stdlib/string-base-remove-last-code-point": "github:stdlib-js/string-base-remove-last-code-point#main",
+    "@stdlib/string-base-remove-last-grapheme-cluster": "github:stdlib-js/string-base-remove-last-grapheme-cluster#main",
     "@stdlib/string-format": "^0.0.3",
-    "@stdlib/string-prev-grapheme-cluster-break": "^0.0.3",
     "@stdlib/utils-regexp-from-string": "^0.0.9"
   },
   "devDependencies": {

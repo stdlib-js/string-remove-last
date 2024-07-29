@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import removeLast from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-remove-last@deno/mod.js';
+import removeLast from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-remove-last@v0.2.2-deno/mod.js';
 ```
 
 #### removeLast( str\[, n]\[, options] )
@@ -100,7 +100,7 @@ out = removeLast( 'foo bar', 0 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import removeLast from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-remove-last@deno/mod.js';
+import removeLast from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-remove-last@v0.2.2-deno/mod.js';
 
 var str = removeLast( 'last man standing' );
 // returns 'last man standin'

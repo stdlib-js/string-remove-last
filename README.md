@@ -192,16 +192,16 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/string-remove-last-cli.svg
 [npm-url]: https://npmjs.org/package/@stdlib/string-remove-last-cli
 
-[test-image]: https://github.com/stdlib-js/string-remove-last@v0.2.2/actions/workflows/test.yml/badge.svg?branch=v0.2.2
-[test-url]: https://github.com/stdlib-js/string-remove-last@v0.2.2/actions/workflows/test.yml?query=branch:v0.2.2
+[test-image]: https://github.com/stdlib-js/string-remove-last/actions/workflows/test.yml/badge.svg?branch=v0.2.2
+[test-url]: https://github.com/stdlib-js/string-remove-last/actions/workflows/test.yml?query=branch:v0.2.2
 
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-remove-last@v0.2.2/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/string-remove-last@v0.2.2?branch=main
+[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-remove-last/main.svg
+[coverage-url]: https://codecov.io/github/stdlib-js/string-remove-last?branch=main
 
 <!--
 
-[dependencies-image]: https://img.shields.io/david/stdlib-js/string-remove-last@v0.2.2.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/string-remove-last@v0.2.2/main
+[dependencies-image]: https://img.shields.io/david/stdlib-js/string-remove-last.svg
+[dependencies-url]: https://david-dm.org/stdlib-js/string-remove-last/main
 
 -->
 
@@ -212,22 +212,22 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
-[cli-section]: https://github.com/stdlib-js/string-remove-last@v0.2.2#cli
-[cli-url]: https://github.com/stdlib-js/string-remove-last@v0.2.2/tree/cli
-[@stdlib/string-remove-last]: https://github.com/stdlib-js/string-remove-last@v0.2.2/tree/main
+[cli-section]: https://github.com/stdlib-js/string-remove-last#cli
+[cli-url]: https://github.com/stdlib-js/string-remove-last/tree/cli
+[@stdlib/string-remove-last]: https://github.com/stdlib-js/string-remove-last/tree/main
 
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
-[deno-url]: https://github.com/stdlib-js/string-remove-last@v0.2.2/tree/deno
-[deno-readme]: https://github.com/stdlib-js/string-remove-last@v0.2.2/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/string-remove-last@v0.2.2/tree/umd
-[umd-readme]: https://github.com/stdlib-js/string-remove-last@v0.2.2/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/string-remove-last@v0.2.2/tree/esm
-[esm-readme]: https://github.com/stdlib-js/string-remove-last@v0.2.2/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/string-remove-last@v0.2.2/blob/main/branches.md
+[deno-url]: https://github.com/stdlib-js/string-remove-last/tree/deno
+[deno-readme]: https://github.com/stdlib-js/string-remove-last/blob/deno/README.md
+[umd-url]: https://github.com/stdlib-js/string-remove-last/tree/umd
+[umd-readme]: https://github.com/stdlib-js/string-remove-last/blob/umd/README.md
+[esm-url]: https://github.com/stdlib-js/string-remove-last/tree/esm
+[esm-readme]: https://github.com/stdlib-js/string-remove-last/blob/esm/README.md
+[branches-url]: https://github.com/stdlib-js/string-remove-last/blob/main/branches.md
 
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/string-remove-last@v0.2.2/main/LICENSE
+[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/string-remove-last/main/LICENSE
 
 [standard-streams]: https://en.wikipedia.org/wiki/Standard_streams
 

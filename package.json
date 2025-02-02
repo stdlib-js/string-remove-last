@@ -54,7 +54,7 @@
     "@stdlib/string-base-remove-last": "^0.2.2",
     "@stdlib/string-base-remove-last-code-point": "^0.2.2",
     "@stdlib/string-base-remove-last-grapheme-cluster": "^0.2.2",
-    "@stdlib/string-format": "^0.2.2",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2",
     "@stdlib/utils-regexp-from-string": "^0.2.2",
     "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
   },

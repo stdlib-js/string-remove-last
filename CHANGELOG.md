@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-08-25)
+## Unreleased (2025-09-06)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`380f888`](https://github.com/stdlib-js/stdlib/commit/380f888de613b7b07e909ce7a1bc53f5a9801717) - **docs:** fix TypeScript declaration examples in string packages _(by Philipp Burckhardt)_
 -   [`2ba491f`](https://github.com/stdlib-js/stdlib/commit/2ba491fef8d133bf17c7cca63935585b862d2476) - **docs:** clean-up example code _(by Philipp Burckhardt)_
 
 </details>
